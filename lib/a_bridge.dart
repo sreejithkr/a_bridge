@@ -9,11 +9,14 @@ class ABridge {
 
   late ABridgePlatformInterface _instance;
 
+  @visibleForTesting
   ABridge._(ABridgePlatformInterface instance) {
       _instance = instance;
   }
 
-  factory ABridge.create() => ABridge._(ABridgePlatform.instance);
+  ABridge() {
+    ABridge._(ABridgePlatform.instance);
+  }
 
   Future<List<String>?> getArgumentList() {
     return _instance.getArgumentList();
