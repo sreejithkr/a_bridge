@@ -3,17 +3,13 @@ import 'a_bridge_platform_interface.dart';
 class ABridge {
   static const argListKey = "arg_list";
 
-  late ABridgePlatformInterface _instance;
+  ABridgePlatformInterface _instance;
 
-  ABridge._(ABridgePlatformInterface instance) {
-      _instance = instance;
-  }
+  ABridge._(this._instance);
 
   factory ABridge.withDependency(ABridgePlatformInterface instance) =>  ABridge._(instance);
 
-  ABridge() {
-    ABridge._(ABridgePlatform.instance);
-  }
+  ABridge() : _instance = ABridgePlatform.instance;
 
   Future<List<String>?> getArgumentList() {
     return _instance.getArgumentList();
