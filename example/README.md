@@ -10,5 +10,13 @@ getArgumentList
 ```
 The method return the list of commandline argument as array which is displayed in the list. 
 
+Install the application on simulator and running the below command would show the param list passed via commandline
+
+```
+ xcrun simctl launch booted com.skr.aBridgeExample --args test1 --port=1729
+```
+
+Note: Application should not be running/active state while executing the command 
+
 
 

@@ -18,7 +18,7 @@ The plugin leverages Flutter's method channels to bridges to API's exposed nativ
 
 
 # ABridge Class
-The ABridge class provides a Flutter plugin interface for retrieving command line arguments from the native platform using Dart's Foreign Function Interface (FFI). This functionality is particularly useful for configuring ports and facilitating Appium Flutter automation in iOS simulators.
+The ABridge class provides a Flutter plugin interface for retrieving command line arguments from the native platform using Dart's Foreign Function Interface (FFI). This functionality is particularly useful for configuring ports and facilitating Appium Flutter Server used along with iOS.
 
 ## Usage
 To use ABridge in your Flutter project:

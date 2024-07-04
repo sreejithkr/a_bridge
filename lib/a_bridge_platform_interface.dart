@@ -28,6 +28,7 @@ abstract class ABridgePlatform extends PlatformInterface implements ABridgePlatf
     _instance = instance;
   }
 
+  @override
   Future<List<String>?> getArgumentList() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }

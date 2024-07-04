@@ -1,18 +1,15 @@
-
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
-
 import 'a_bridge_platform_interface.dart';
 
 class ABridge {
+  static const argListKey = "arg_list";
 
   late ABridgePlatformInterface _instance;
 
-  @visibleForTesting
   ABridge._(ABridgePlatformInterface instance) {
       _instance = instance;
   }
+
+  factory ABridge.withDependency(ABridgePlatformInterface instance) =>  ABridge._(instance);
 
   ABridge() {
     ABridge._(ABridgePlatform.instance);
