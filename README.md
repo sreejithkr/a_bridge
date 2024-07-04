@@ -2,7 +2,7 @@
 # a_bridge
 
 ## Storyline
-The Flutter plugin "a_bridge" was conceived to enhance Appium Flutter automation within iOS simulators. The plugin was build to solve a particular problem statement as part of the discussion defined in the storyline.
+The Flutter plugin "a_bridge" was conceived to enhance Appium Flutter automation within iOS. The plugin was build to solve a particular problem statement as part of the discussion defined in the storyline.
 
 Its name, derived from "A Bridge", symbolizes its role in bridging functionalities across flutter runtime and native operating systems.The end outcome or theme would be to leverage these to bring operational  
 scalability and efficiency in the development environment.
