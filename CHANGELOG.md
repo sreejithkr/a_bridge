@@ -8,3 +8,7 @@ The plugin leverages Flutter's method channels to bridges to API's exposed nativ
 
 ## 0.0.2
 Fixed runtime issue with late initialization of the dependency inside ABridge class
+
+## 0.0.3
+Fixed the format issue and the readme installation instruction 
+

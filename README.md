@@ -27,7 +27,7 @@ To use ABridge in your Flutter project:
 
 Add ABridge as a dependency in your pubspec.yaml file:
 ```  
- dependencies: a_bridge: ^0.0.2  
+ dependencies: a_bridge: ^0.0.3  
 ```  
 
 ### Import

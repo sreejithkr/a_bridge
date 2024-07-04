@@ -1,6 +1,6 @@
 name: a_bridge
 description: "The flutter plugin that which was born to empower appium flutter automation in iOS simulator"
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/sreejithkr/a_bridge.git
 
 environment:
