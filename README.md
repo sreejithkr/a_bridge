@@ -9,7 +9,7 @@ scalability and efficiency in the development environment.
 
 The idea emerged during a conversation between two tech enthusiasts—a QA specialist and an iOS developer—discussing challenges related to reading command line arguments passed to an application processes. The iOS developer highlighted the possibility to read these arguments via Swift APIs. The reasoning exchanged was the fundamental fact that as underneath every process  there is a entry-point function(main in case of ios) that act as the starting point of the application.
 
-The initial purpose of the "a_bridge" Flutter plugin centers on extracting command line parameters, crucial for configuring ports in [Appium Flutter Server](https://pub.dev/packages/appium_flutter_server). This functionality serves as a foundational feature, with plans to expand its capabilities over time to add the feature from underlying operating system that which help development. 
+The initial purpose of the "a_bridge" Flutter plugin centers on extracting command line parameters, crucial for configuring ports in [Appium Flutter Server](https://pub.dev/packages/appium_flutter_server). This functionality serves as a foundational feature, with plans to expand its capabilities over time to add the feature from underlying operating system that which help development.
 
 The plugin leverages Flutter's method channels to bridges to API's exposed native platforms.
 
@@ -27,7 +27,7 @@ To use ABridge in your Flutter project:
 
 Add ABridge as a dependency in your pubspec.yaml file:
 ```  
- dependencies: a_bridge: ^0.0.1```  
+ dependencies: a_bridge: ^0.0.1  
 ```  
 
 ### Import
@@ -55,12 +55,20 @@ Use the ABridge class to retrieve command line arguments asynchronously:
  ```  
 
 ### ABridge Class API
- ``` 
- Future<List<String>?> getArgumentList() 
- ```
-Description: Retrieves a list of command line arguments from the native platform.
 
-Returns: A Future that resolves to a list of Strings representing command line arguments passed to the application.
+
+#### Public Functions
+```
+Future<List<String>?> getArgumentList()
+```
+Returns a Future that resolves to a list of arguments retrieved from the platform interface.
+
+```
+Future<Map<String, dynamic>?> getArgumentPair({String separator = "="})
+```
+Returns a Future that resolves to a map of arguments parsed from the argument list, where each key-value pair represents an argument and its corresponding value. The separator parameter specifies the character used to separate key-value pairs in the arguments.
+
+
 
 Usage Example:
 
@@ -73,6 +81,19 @@ Usage Example:
  else { 
 	print('Failed to retrieve command line arguments.'); 
  }
+
+
+ Map<String,dynamic>? mapArguments = aBridge.getArgumentPair(separator: '=');
+  if (mapArguments != null) {
+    print('Argument Map: $mapArguments');
+    for (var key in mapArguments.keys) {
+	 var value = mapArguments[key];
+   	 print('Key: $key, Value: $value');
+    }
+  } else {
+    print('Failed to retrieve argument map.');
+  }
+
  ```  
 
 ### Contributing
