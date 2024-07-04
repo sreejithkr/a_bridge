@@ -5,7 +5,7 @@
 Pod::Spec.new do |s|
   s.name             = 'a_bridge'
   s.version          = '0.0.1'
-  s.summary          = 'The flutter plugin that which was born to empower appium flutterautomation in iOS simulator'
+  s.summary          = 'The flutter plugin that which was born to empower appium flutter automation in iOS simulator'
   s.description      = <<-DESC
 The flutter plugin that which was born to empower appium flutterautomation in iOS simulator
                        DESC

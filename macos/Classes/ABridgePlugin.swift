@@ -10,8 +10,8 @@ public class ABridgePlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
-    case "getPlatformVersion":
-      result("macOS " + ProcessInfo.processInfo.operatingSystemVersionString)
+    case "getArgumentList":
+        result(CommandLine.arguments)
     default:
       result(FlutterMethodNotImplemented)
     }

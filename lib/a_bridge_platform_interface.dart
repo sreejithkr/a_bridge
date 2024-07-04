@@ -2,7 +2,12 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'a_bridge_method_channel.dart';
 
-abstract class ABridgePlatform extends PlatformInterface {
+
+abstract class ABridgePlatformInterface  {
+  Future<List<String>?> getArgumentList();
+}
+
+abstract class ABridgePlatform extends PlatformInterface implements ABridgePlatformInterface {
   /// Constructs a ABridgePlatform.
   ABridgePlatform() : super(token: _token);
 

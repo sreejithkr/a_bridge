@@ -17,12 +17,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<String> _argument = ['Unknown'];
-  final _aBridgePlugin = ABridge();
+  final _aBridgePlugin = ABridge.init();
 
   @override
   void initState() {
     super.initState();
     initPlatformState();
+    _aBridgePlugin.getArgumentPair();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
