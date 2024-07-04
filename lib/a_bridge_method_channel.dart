@@ -11,7 +11,8 @@ class MethodChannelABridge extends ABridgePlatform {
 
   @override
   Future<List<String>?> getArgumentList() async {
-    final list = await methodChannel.invokeListMethod<String>('getArgumentList');
+    final list =
+        await methodChannel.invokeListMethod<String>('getArgumentList');
     return list;
   }
 }

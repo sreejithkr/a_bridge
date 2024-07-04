@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       arguments =
           (await _aBridgePlugin.getArgumentList()) ?? ['No params received'];
     } on PlatformException {
-      arguments =  ['No params received'];
+      arguments = ['No params received'];
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -76,9 +76,11 @@ class _MyAppState extends State<MyApp> {
               onPressed: () async {
                 // Add your button onPressed logic here
                 print('Button pressed');
-                List<String> arguments = (await _aBridgePlugin.getArgumentList()) ?? ['No params received'];
+                List<String> arguments =
+                    (await _aBridgePlugin.getArgumentList()) ??
+                        ['No params received'];
                 setState(() {
-                _argument = arguments;
+                  _argument = arguments;
                 });
               },
               style: ButtonStyle(
@@ -88,8 +90,7 @@ class _MyAppState extends State<MyApp> {
               child: Text('Press Me'),
             ),
           ],
-        )
-        ,
+        ),
       ),
     );
   }

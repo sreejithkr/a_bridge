@@ -7,7 +7,8 @@ class ABridge {
 
   ABridge._(this._instance);
 
-  factory ABridge.withDependency(ABridgePlatformInterface instance) =>  ABridge._(instance);
+  factory ABridge.withDependency(ABridgePlatformInterface instance) =>
+      ABridge._(instance);
 
   ABridge() : _instance = ABridgePlatform.instance;
 
@@ -15,12 +16,13 @@ class ABridge {
     return _instance.getArgumentList();
   }
 
-  Future<Map<String,dynamic>?> getArgumentPair({String separator = "="}) {
-    return getArgumentList()
-        .then((args) => (args == null) ? null : _parseArguments(args,separator: separator));
+  Future<Map<String, dynamic>?> getArgumentPair({String separator = "="}) {
+    return getArgumentList().then((args) =>
+        (args == null) ? null : _parseArguments(args, separator: separator));
   }
 
-  Map<String, dynamic> _parseArguments(List<String> args,{String separator = "="}) {
+  Map<String, dynamic> _parseArguments(List<String> args,
+      {String separator = "="}) {
     Map<String, dynamic> argMap = {};
     List<String> argList = [];
 
@@ -43,7 +45,4 @@ class ABridge {
     argMap["arg_list"] = argList;
     return argMap;
   }
-
-
-
 }
