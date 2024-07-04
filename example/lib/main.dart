@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   List<String> _argument = ['Unknown'];
-  final _aBridgePlugin = ABridge.init();
+  final _aBridgePlugin = ABridge.create();
 
   @override
   void initState() {

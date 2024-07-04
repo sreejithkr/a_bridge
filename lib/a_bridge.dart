@@ -7,13 +7,16 @@ import 'a_bridge_platform_interface.dart';
 
 class ABridge {
 
-  ABridgePlatformInterface instance;
-  ABridge(this.instance);
+  late ABridgePlatformInterface _instance;
 
-  factory ABridge.init() => ABridge(ABridgePlatform.instance);
+  ABridge._(ABridgePlatformInterface instance) {
+      _instance = instance;
+  }
+
+  factory ABridge.create() => ABridge._(ABridgePlatform.instance);
 
   Future<List<String>?> getArgumentList() {
-    return instance.getArgumentList();
+    return _instance.getArgumentList();
   }
 
   Future<Map<String,dynamic>?> getArgumentPair({String separator = "="}) {
