@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.version          = '0.0.1'
   s.summary          = 'The flutter plugin that which was born to empower appium flutterautomation in iOS simulator'
   s.description      = <<-DESC
-The flutter plugin that which was born to empower appium flutterautomation in iOS simulator
+The flutter plugin that which was born to empower appium flutter automation in iOS simulator
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = ' https://github.com/sreejithkr/a_bridge.git'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Sreejith K R' => 'masked' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
