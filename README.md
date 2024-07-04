@@ -7,12 +7,11 @@ The Flutter plugin "a_bridge" was conceived to enhance Appium Flutter automation
 Its name, derived from "A Bridge", symbolizes its role in bridging functionalities across flutter runtime and native operating systems.The end outcome or theme would be to leverage these to bring operational  
 scalability and efficiency in the development environment.
 
-The idea emerged during a conversation between two tech enthusiasts—a QA specialist and an iOS developer—discussing challenges related to reading command line arguments passed to an application processes.   
-The iOS developer highlighted the possiblity to read these arguments via Swift APIs as underneath there is a main function that act as the starting point of the applicaiton.
+The idea emerged during a conversation between two tech enthusiasts—a QA specialist and an iOS developer—discussing challenges related to reading command line arguments passed to an application processes. The iOS developer highlighted the possibility to read these arguments via Swift APIs. The reasoning exchanged was the fundamental fact that as underneath every process  there is a entry-point function(main in case of ios) that act as the starting point of the application.
 
-The initial purpose of the "a_bridge" Flutter plugin centers on extracting command line parameters, crucial for configuring ports in Appium Flutter Server. This functionality   
-serves as a foundational feature, with plans to expand its capabilities over time. The plugin leverages Flutter's method channels to potentially integrate additional bridges to native platforms  
-as future requirements dictates.
+The initial purpose of the "a_bridge" Flutter plugin centers on extracting command line parameters, crucial for configuring ports in [Appium Flutter Server](https://pub.dev/packages/appium_flutter_server). This functionality serves as a foundational feature, with plans to expand its capabilities over time to add the feature from underlying operating system that which help development. 
+
+The plugin leverages Flutter's method channels to bridges to API's exposed native platforms.
 
 ## Note
 ####  Although currently centered on command line argument extraction, the "a_bridge" plugin is designed to evolve. It aims to bridge diverse OS functionalities, fostering operational efficiency and scalability for development operations.
