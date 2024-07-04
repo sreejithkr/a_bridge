@@ -1,0 +1,33 @@
+name: Flutter Test and Format
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+      - master  # If you use 'master' as the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '2.x'  # Adjust to the Flutter version you are using
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Test
+      run: flutter test
+
+    - name: Check formatting
+      run: |
+        dart format --output=none --set-exit-if-changed .
+        if [ $? -ne 0 ]; then
+          echo "Dart formatting issues found. Please run 'dart format' locally."
+          exit 1
+        fi
+
