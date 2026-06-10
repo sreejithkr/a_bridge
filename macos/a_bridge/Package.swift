@@ -9,7 +9,7 @@ let package = Package(
         .macOS(.v10_14)
     ],
     products: [
-        .library(name: "a-bridge", targets: ["a_bridge"])
+        .library(name: "a_bridge", targets: ["a_bridge"])
     ],
     dependencies: [],
     targets: [
