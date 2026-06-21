@@ -14,7 +14,7 @@ The flutter plugin that which was born to empower appium flutter automation in i
   s.author           = { 'Sreejith K R' => 'masked' }
 
   s.source           = { :path => '.' }
-  s.source_files     = 'Classes/**/*'
+  s.source_files     = 'a_bridge/Sources/a_bridge/**/*'
   s.dependency 'FlutterMacOS'
 
   s.platform = :osx, '10.11'

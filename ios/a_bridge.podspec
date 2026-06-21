@@ -13,7 +13,7 @@ The flutter plugin that which was born to empower appium flutter automation in i
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Sreejith K R' => 'masked' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'a_bridge/Sources/a_bridge/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '11.0'
 

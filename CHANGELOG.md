@@ -12,3 +12,6 @@ Fixed runtime issue with late initialization of the dependency inside ABridge cl
 ## 0.0.3
 Fixed the format issue and the readme installation instruction 
 
+## 0.1.0
+Added Swift Package Manager (SPM) support for iOS and macOS platforms.
+
