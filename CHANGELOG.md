@@ -15,3 +15,6 @@ Fixed the format issue and the readme installation instruction
 ## 0.1.0
 Added Swift Package Manager (SPM) support for iOS and macOS platforms.
 
+## 0.1.1
+Updated the Swift Package Manager product name to use kebab-case.
+
